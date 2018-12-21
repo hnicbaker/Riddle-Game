@@ -19,6 +19,7 @@ function setRiddleText(){
 	secTitle.innerHTML = answers[riddleNumber].riddle;	
 }
 
+
 function gameInit(){
 	mainButton.addEventListener("click", function(){
 	if(onTitleScreen == true) {
@@ -41,6 +42,7 @@ function gameInit(){
 function checkForWin(){
 	if(riddleNumber == answers.length){
 		//console.log('YOU WINN!!!!!');
+
 		return true;
 	}
 	return false;
@@ -49,16 +51,20 @@ function checkForWin(){
 function checkAnswer(){
 	let userInput = document.getElementById('userInput').value;
 	if(userInput == answers[riddleNumber].word) {
-		//reset timer
+		triTitle.id ='fadeOut';
+		triTitle.innerHTML = "Correct! Now try this!";
 		riddleNumber = riddleNumber + 1;
 		if(checkForWin() == true) {
-			console.log('u win');
+			gameBoard.style.fontSize = "45px";
+			gameBoard.innerHTML = 'You Win!';
+
 			return;
 	}
 	setRiddleText();
 
 	} else { 
-		//console.log('Heather is a failure');
+		triTitle.id ='fadeOut';
+		triTitle.innerHTML = "Please Try Again";
 	}
 }
 
