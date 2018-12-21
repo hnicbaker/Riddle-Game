@@ -1,2 +1,2 @@
 # projectOne
-Project one - Crossword Game
+Project one - Riddle Word Game
