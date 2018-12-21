@@ -1,0 +1,76 @@
+html{
+  background-image: linear-gradient(#DDC3D0, #DBDAEA);
+  background-size: cover;
+  height:100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+body{
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+h1{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 75px;
+
+}
+
+p {
+  font-size: 25pt;
+}
+
+button{
+  height:50px;
+  width:100px;
+  text-align: center;
+  background-color: #F2E9ED;
+  border: white;
+  color: grey;
+  font-size: 20pt;
+  font-family: 'Work Sans', sans-serif;
+}
+
+button:hover{
+  color: black;
+  transform: scale(1.1);
+}
+
+button:active{
+  color: black;
+  transform: scale(1);
+}
+
+
+#fadeOut {
+    opacity: 0;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0%{opacity: 1;}
+  50% { opacity: .5 }
+  100% { opacity: 0 }
+}
+
+#fadeIn {
+  opacity:0;
+  animation:fadein 3s linear;;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0%{opacity: 0;}
+  50% { opacity: .5 }
+  100% { opacity: 1 }
+}
+
+
